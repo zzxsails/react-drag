@@ -1,0 +1,149 @@
+
+.home {
+    height: 100vh;
+}
+
+.header {
+    height: 100px;
+    background: white;
+    border-bottom: 2px solid rgb(222, 221, 221);
+}
+
+.content {
+    height: calc(100vh - 100px);
+}
+
+.sider {
+    // border: 1px solid gray;
+    background: white;
+
+    .lable {
+        // height: 35px;
+        line-height: 25px;
+        font-size: 18px;
+        margin: 10px 0;
+        cursor: move;
+    }
+}
+
+.midle {
+    margin: 10px 0;
+    width: calc(100vw - 390px);
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+.cusResize{
+    transform: scale(var(--s));
+}
+
+.attr_cols {
+    .ant-collapse-header .ant-collapse-header-text {
+        color: #3671fb;
+    }
+
+    .ant-collapse-content>.ant-collapse-content-box {
+        padding: 0;
+
+    }
+
+}
+.base_attr{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li{
+        padding:10px 0;
+        display: flex;
+        .lab{
+            flex: 1;
+        }
+        .val{
+            flex:2;
+            .input{
+                width:100%
+            }
+        }
+    }
+}
+.attr_comp {
+
+    // text-align: left;
+    ul {
+        list-style-type: none;
+        padding: 0 10px;
+
+        li {
+            line-height: 25px;
+            // font-size:14px;
+            display: flex;
+
+            .lab {
+                flex: 1
+            }
+
+            .val {
+                flex: 2
+            }
+        }
+    }
+}
+
+.menuDom {
+    position: absolute;
+    padding: 10px 20px 10px 10px;
+    border: 1px solid red;
+    z-index: 1000;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            line-height: 25px;
+            color: gray;
+            margin: 5px 0;
+            cursor: pointer;
+
+            .anticon {
+                font-size: 20px;
+                padding-right: 10px;
+
+            }
+
+        }
+    }
+}
+
+.secBox{
+    // scale:var(--s);
+    &::before {
+        position: absolute;
+        top: 0;
+        left: -5px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 5px solid red;
+        border-left: 4px solid red;
+        z-index:9999
+      }
+      &::after {
+        position: absolute;
+        top: 0;
+        right: -5px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 5px solid red;
+        border-right: 4px solid red;
+        z-index:9999
+      }
+      transform: translate(0,5px) scale(var(--s));
+    //   scale:var(--s)
+    // transform:translateY(12px)
+}
